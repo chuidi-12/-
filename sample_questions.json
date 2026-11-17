@@ -1,0 +1,74 @@
+{
+  "version": 1,
+  "questions": [
+    {
+      "id": "sample_single_001",
+      "type": "single",
+      "stem": "下列哪一项是 Python 中的**不可变**类型？",
+      "options": [
+        {"key": "A", "text": "list"},
+        {"key": "B", "text": "dict"},
+        {"key": "C", "text": "tuple"},
+        {"key": "D", "text": "set"}
+      ],
+      "answer": ["C"],
+      "analysis": "`tuple` 创建后不能修改元素；`list`、`dict`、`set` 都可变。",
+      "groups": ["Python 基础", "示例题库"],
+      "tags": ["数据类型", "不可变对象"],
+      "source": "manual"
+    },
+    {
+      "id": "sample_multiple_001",
+      "type": "multiple",
+      "stem": "关于 SQL 索引，下列说法正确的有哪些？",
+      "options": [
+        {"key": "A", "text": "索引能加快等值查询"},
+        {"key": "B", "text": "索引一定会加快写入"},
+        {"key": "C", "text": "复合索引遵循最左前缀原则"},
+        {"key": "D", "text": "索引不占用磁盘空间"}
+      ],
+      "answer": ["A", "C"],
+      "analysis": "索引以额外存储与写入开销换取查询速度；复合索引按最左前缀生效。",
+      "groups": ["数据库", "示例题库"],
+      "tags": ["索引", "查询优化"],
+      "source": "manual"
+    },
+    {
+      "id": "sample_blank_001",
+      "type": "blank",
+      "stem": "圆周率通常近似为 $3.14$，其希腊字母符号是 ____；定积分 $\\int_0^1 x^2 dx$ 的值是 ____。",
+      "answer": [["π", "pi", "圆周率"], ["1/3", "0.3333", "三分之一"]],
+      "analysis": "$\\int_0^1 x^2 dx = \\left.\\frac{x^3}{3}\\right|_0^1 = \\frac{1}{3}$。",
+      "groups": ["数学", "示例题库"],
+      "tags": ["积分", "常数"],
+      "source": "manual"
+    },
+    {
+      "id": "sample_short_001",
+      "type": "short",
+      "stem": "简述哈希表解决键冲突的两种常见方法，并各说明一句话原理。",
+      "answer": [
+        "链地址法：把映射到同一桶的元素串成链表或红黑树",
+        "开放定址法：冲突时按探测序列在表内寻找下一个空位",
+        "（补充要点）说明装填因子过高时需要扩容再哈希"
+      ],
+      "analysis": "两条主线是「拉链」与「探测」；装填因子影响冲突概率。",
+      "groups": ["数据结构", "示例题库"],
+      "tags": ["哈希表", "冲突处理"],
+      "source": "manual"
+    },
+    {
+      "id": "sample_short_002",
+      "type": "short",
+      "stem": "用一句话说明数据库事务的 ACID 中「I」的含义，并写出一种实现手段。",
+      "answer": [
+        "隔离性：并发事务之间互不干扰，中间状态对其他事务不可见",
+        "实现手段：锁 / MVCC 多版本并发控制 / 隔离级别"
+      ],
+      "analysis": "隔离性由隔离级别与并发控制机制共同保证。",
+      "groups": ["数据库", "示例题库"],
+      "tags": ["事务", "ACID"],
+      "source": "manual"
+    }
+  ]
+}
